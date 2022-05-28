@@ -1,0 +1,191 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: quote;
+    src: url("../font/username.woff2");
+}
+
+@font-face {
+    font-family: username;
+    src: url("../font/quote.woff2");
+}
+
+body {
+    background-color: #16161a;
+}
+
+.profile {
+    width: max-content;
+    margin: auto;
+    margin-top: 75px;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px solid #21222b93;
+}
+
+.profile-username {
+    margin-top: 10px;
+    color: #ffffff;
+    font-family: username;
+    text-align: center;
+}
+
+.profile-quote {
+    color: #94a1b2;
+    font-family: quote;
+    text-align: center;
+    margin-top: -15px;
+    width: max-content;
+    margin: auto;
+}
+
+hr {
+    width: 50px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: white;
+    font-family: quote;
+    text-align: center;
+    margin-top: -15px;
+    width: max-content;
+    margin: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 75vh;
+    animation: fadeInUp .8s;
+}
+
+.profile p {
+    position: relative;
+    top: 50%;
+    border-right: 2px solid rgba(255, 255, 255, .75);
+    white-space: nowrap;
+    overflow: hidden;
+    color: #94a1b2;
+    font-size: 13px;
+    animation: typewriter 3s steps(44) 1s 1 normal both, blinkTextCursor 530ms steps(44) infinite normal;
+}
+
+.profile ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    list-style: none
+}
+
+.profile ul li a {
+    color: #a6a8b8;
+    display: flex;
+    text-decoration: none;
+    margin: 20px 5px;
+    font-size: 25px;
+    padding: 5px;
+    transition: 0.2s all;
+}
+
+.profile ul li a:hover {
+    transition: 0.2s all;
+    color: #fff;
+}
+
+.jobs img {
+    width: 32px;
+    border-radius: 7px;
+}
+
+.venade img {
+    width: 45px;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 19em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 150px, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translate3d(0, -150px, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+.hovertext {
+    position: relative;
+}
+  
+.hovertext:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(116, 130, 255, 0.119);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    transition: opacity 1s ease-in-out;
+  
+    position: absolute;
+    z-index: 1;
+    left: -28px;
+    top: 110%;
+
+    font-family: username;
+    font-size: 13px;
+}
+  
+.hovertext:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
